@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
+    <title>Mood app</title>
     <style>
       .buttons {
-        border-color: red;
+        border-color: #e91c2b;
       }
 
       #content {
@@ -17,41 +17,51 @@
         color: white;
       }
       button {
-        height: 10rem !important;
-        width: 100%;
+        height: 128px;
+        left: 134px;
+        top: 137px;
+        width: 111px;
+
       }
       .btn-red {
-        background-color: red !important;
+        background-color: #e91c2b !important;
       }
       .btn-orange {
-        background-color: orange !important;
+        background-color: #F48A1D !important;
       }
       .btn-blue {
-        background-color: blue !important;
+        background-color: #44A0E3 !important;
       }
       .btn-green {
-        background-color: green !important;
+        background-color: #0aa350 !important;
       }
       .btn-pink {
-        background-color: pink !important;
+        background-color: #d90b91 !important;
       }
       .btn-brown {
-        background-color: brown !important;
+        background-color: #6D330D !important;
       }
       .btn-black {
-        background-color: black !important;
+        background-color: #101115 !important;
       }
       .btn-yellow {
-        background-color: yellow !important;
+        background-color: #eacf2a !important;
       }
       .btn-purple {
-        background-color: purple !important;
+        background-color: #693599 !important;
       }
 
       .lamp {
         text-align: center;
         height: 1.5em;
         border: 2px solid black;
+        height: 400px;
+      }
+
+      .phonescreen {
+        width: 410px;
+        text-align: center;
+        vertical-align: center;
       }
     </style>
     <link
@@ -62,47 +72,50 @@
     />
   </head>
   <body>
-    <div class="container">
-      <div class="row">
-        <div class="buttons">
-          <div class="row">
+    <div class="phonescreen">
+      <div class="container">
+        <div class="row">
+          <div class="buttons">
+            <div class="row">
+              <div class="row mt-3">
+                <h1>Select a colour</h1>
+                <h5>that matches your mood</h3>
+              </div>
+              <div class="col">
+                <button class="btn btn-red" value="RED"></button>
+              </div>
+              <div class="col">
+                <button class="btn btn-orange" value="ORANGE"></button>
+              </div>
+              <div class="col">
+                <button class="btn btn-yellow" value="YELLOW"></button>
+              </div>
+            </div>
             <div class="row mt-3">
-              <div>Opacity:</div>
-              <div>Saturation</div>
+              <div class="col">
+                <button class="btn btn-green" value="GREEN"></button>
+              </div>
+              <div class="col">
+                <button class="btn btn-blue" value="BLUE"></button>
+              </div>
+              <div class="col">
+                <button class="btn btn-pink" value="PINK"></button>
+              </div>
             </div>
-            <div class="col">
-              <button class="btn btn-red" value="RED"></button>
-            </div>
-            <div class="col">
-              <button class="btn btn-orange" value="ORANGE"></button>
-            </div>
-            <div class="col">
-              <button class="btn btn-yellow" value="YELLOW"></button>
-            </div>
-          </div>
-          <div class="row mt-3">
-            <div class="col">
-              <button class="btn btn-green" value="GREEN"></button>
-            </div>
-            <div class="col">
-              <button class="btn btn-blue" value="BLUE"></button>
-            </div>
-            <div class="col">
-              <button class="btn btn-pink" value="PINK"></button>
+            <div class="row mt-3">
+              <div class="col">
+                <button class="btn btn-purple" value="PURPLE"></button>
+              </div>
+              <div class="col">
+                <button class="btn btn-brown" value="BROWN"></button>
+              </div>
+              <div class="col">
+                <button class="btn btn-black" value="BLACK"></button>
+              </div>
             </div>
           </div>
-          <div class="row mt-3">
-            <div class="col">
-              <button class="btn btn-purple" value="PURPLE"></button>
-            </div>
-            <div class="col">
-              <button class="btn btn-brown" value="BROWN"></button>
-            </div>
-            <div class="col">
-              <button class="btn btn-black" value="BLACK"></button>
-            </div>
-          </div>
-        </div>
+    </div>
+    
 
         <!-- <div class="col">
           <div class="buttons">
@@ -114,15 +127,8 @@
       </div>
       <div class="row">
         <div id="content" class="mt-5">PLAFOND / KLEUR NACHTLAMP</div>
-        <div class="row">
-          <div class="col"></div>
-          <div class="col">
-            <div class="lamp"></div>
-          </div>
-          <div class="col"></div>
-          <div class="col"><div class="lamp"></div></div>
-          <div class="col"></div>
-        </div>
+          <div class="lamp"></div>
+        
       </div>
     </div>
     <script type="text/javascript">
@@ -137,8 +143,8 @@
           switch (event.target.value) {
             case "RED":
               for (let i = 0; i < test.length; i++) {
-                test[i].style.backgroundColor = "red";
-                test[i].style.borderColor = "red";
+                test[i].style.backgroundColor = "#e91c2b";
+                test[i].style.borderColor = "#e91c2b";
               }
 
               break;
@@ -150,26 +156,26 @@
               break;
             case "ORANGE":
               for (let i = 0; i < test.length; i++) {
-                test[i].style.backgroundColor = "orange";
-                test[i].style.borderColor = "orange";
+                test[i].style.backgroundColor = "#F48A1D";
+                test[i].style.borderColor = "#F48A1D";
               }
               break;
             case "BLUE":
               for (let i = 0; i < test.length; i++) {
-                test[i].style.backgroundColor = "blue";
-                test[i].style.borderColor = "blue";
+                test[i].style.backgroundColor = "#44A0E3";
+                test[i].style.borderColor = "#44A0E3";
               }
               break;
             case "PINK":
               for (let i = 0; i < test.length; i++) {
-                test[i].style.backgroundColor = "pink";
-                test[i].style.borderColor = "pink";
+                test[i].style.backgroundColor = "#d90b91";
+                test[i].style.borderColor = "#d90b91";
               }
               break;
             case "PURPLE":
               for (let i = 0; i < test.length; i++) {
-                test[i].style.backgroundColor = "purple";
-                test[i].style.borderColor = "purple";
+                test[i].style.backgroundColor = "#693599";
+                test[i].style.borderColor = "#693599";
               }
               break;
             case "BROWN":
@@ -186,8 +192,8 @@
               break;
             case "GREEN":
               for (let i = 0; i < test.length; i++) {
-                test[i].style.backgroundColor = "green";
-                test[i].style.borderColor = "green";
+                test[i].style.backgroundColor = "#0aa350";
+                test[i].style.borderColor = "#0aa350";
               }
               break;
             default:
