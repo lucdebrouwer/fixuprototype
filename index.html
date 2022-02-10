@@ -72,6 +72,11 @@
     />
   </head>
   <body>
+    <audio id="myAudio" preload="auto">
+      <source src="assets/mp3/red.mp3" type="audio/mpeg">
+      <source src="assets/mp3/orange.mp3" type="audio/mpeg">
+      <source src="assets/mp3/yellow.mp3" type="audio/mpeg">
+    </audio>
     <div class="phonescreen">
       <div class="container">
         <div class="row">
@@ -137,11 +142,25 @@
       let test = document.getElementsByClassName("lamp");
       console.log(test);
 
+      var audio = document.getElementById("myAudio"); 
+
+      function playMusic (buttoncolor) {
+        document.getElementById("myAudio").pause();
+        document.getElementById("myAudio").setAttribute('src', 'assets/mp3/' + buttoncolor + '.mp3');
+        document.getElementById("myAudio").load();
+        document.getElementById("myAudio").play();
+      };
+
+      function pauseMusic() {
+        audio.pause();
+      }
+
       let mainButtons = document.querySelector(".buttons");
       mainButtons.addEventListener("click", event => {
         if (event.target.tagName == "BUTTON") {
           switch (event.target.value) {
             case "RED":
+            playMusic('red');
               for (let i = 0; i < test.length; i++) {
                 test[i].style.backgroundColor = "#e91c2b";
                 test[i].style.borderColor = "#e91c2b";
@@ -149,12 +168,14 @@
 
               break;
             case "YELLOW":
+              playMusic('yellow');
               for (let i = 0; i < test.length; i++) {
                 test[i].style.backgroundColor = "yellow";
                 test[i].style.borderColor = "yellow";
               }
               break;
             case "ORANGE":
+              playMusic('orange');
               for (let i = 0; i < test.length; i++) {
                 test[i].style.backgroundColor = "#F48A1D";
                 test[i].style.borderColor = "#F48A1D";
