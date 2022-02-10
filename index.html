@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      .buttons {
+        border-color: red;
+      }
+
+      #content {
+        vertical-align: center;
+        text-align: center;
+        background-color: black;
+        color: white;
+      }
+      button {
+        height: 10rem !important;
+        width: 100%;
+      }
+      .btn-red {
+        background-color: red !important;
+      }
+      .btn-orange {
+        background-color: orange !important;
+      }
+      .btn-blue {
+        background-color: blue !important;
+      }
+      .btn-green {
+        background-color: green !important;
+      }
+      .btn-pink {
+        background-color: pink !important;
+      }
+      .btn-brown {
+        background-color: brown !important;
+      }
+      .btn-black {
+        background-color: black !important;
+      }
+      .btn-yellow {
+        background-color: yellow !important;
+      }
+      .btn-purple {
+        background-color: purple !important;
+      }
+
+      .lamp {
+        text-align: center;
+        height: 1.5em;
+        border: 2px solid black;
+      }
+    </style>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="buttons">
+          <div class="row">
+            <div class="row mt-3">
+              <div>Opacity:</div>
+              <div>Saturation</div>
+            </div>
+            <div class="col">
+              <button class="btn btn-red" value="RED"></button>
+            </div>
+            <div class="col">
+              <button class="btn btn-orange" value="ORANGE"></button>
+            </div>
+            <div class="col">
+              <button class="btn btn-yellow" value="YELLOW"></button>
+            </div>
+          </div>
+          <div class="row mt-3">
+            <div class="col">
+              <button class="btn btn-green" value="GREEN"></button>
+            </div>
+            <div class="col">
+              <button class="btn btn-blue" value="BLUE"></button>
+            </div>
+            <div class="col">
+              <button class="btn btn-pink" value="PINK"></button>
+            </div>
+          </div>
+          <div class="row mt-3">
+            <div class="col">
+              <button class="btn btn-purple" value="PURPLE"></button>
+            </div>
+            <div class="col">
+              <button class="btn btn-brown" value="BROWN"></button>
+            </div>
+            <div class="col">
+              <button class="btn btn-black" value="BLACK"></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- <div class="col">
+          <div class="buttons">
+            <button class="btn btn-primary">R</button>
+            <button class="btn btn-primary">G</button>
+            <button class="btn btn-primary">B</button>
+          </div>
+        </div> -->
+      </div>
+      <div class="row">
+        <div id="content" class="mt-5">PLAFOND / KLEUR NACHTLAMP</div>
+        <div class="row">
+          <div class="col"></div>
+          <div class="col">
+            <div class="lamp"></div>
+          </div>
+          <div class="col"></div>
+          <div class="col"><div class="lamp"></div></div>
+          <div class="col"></div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript">
+      //let content = document.querySelector("#content");
+
+      let test = document.getElementsByClassName("lamp");
+      console.log(test);
+
+      let mainButtons = document.querySelector(".buttons");
+      mainButtons.addEventListener("click", event => {
+        if (event.target.tagName == "BUTTON") {
+          switch (event.target.value) {
+            case "RED":
+              for (let i = 0; i < test.length; i++) {
+                test[i].style.backgroundColor = "red";
+                test[i].style.borderColor = "red";
+              }
+
+              break;
+            case "YELLOW":
+              for (let i = 0; i < test.length; i++) {
+                test[i].style.backgroundColor = "yellow";
+                test[i].style.borderColor = "yellow";
+              }
+              break;
+            case "ORANGE":
+              for (let i = 0; i < test.length; i++) {
+                test[i].style.backgroundColor = "orange";
+                test[i].style.borderColor = "orange";
+              }
+              break;
+            case "BLUE":
+              for (let i = 0; i < test.length; i++) {
+                test[i].style.backgroundColor = "blue";
+                test[i].style.borderColor = "blue";
+              }
+              break;
+            case "PINK":
+              for (let i = 0; i < test.length; i++) {
+                test[i].style.backgroundColor = "pink";
+                test[i].style.borderColor = "pink";
+              }
+              break;
+            case "PURPLE":
+              for (let i = 0; i < test.length; i++) {
+                test[i].style.backgroundColor = "purple";
+                test[i].style.borderColor = "purple";
+              }
+              break;
+            case "BROWN":
+              for (let i = 0; i < test.length; i++) {
+                test[i].style.backgroundColor = "brown";
+                test[i].style.borderColor = "brown";
+              }
+              break;
+            case "BLACK":
+              for (let i = 0; i < test.length; i++) {
+                test[i].style.backgroundColor = "black";
+                test[i].style.borderColor = "black";
+              }
+              break;
+            case "GREEN":
+              for (let i = 0; i < test.length; i++) {
+                test[i].style.backgroundColor = "green";
+                test[i].style.borderColor = "green";
+              }
+              break;
+            default:
+              for (let i = 0; i < test.length; i++) {
+                test[i].style.backgroundColor = "#fff";
+                test[i].style.borderColor = "#fff";
+              }
+              break;
+          }
+        }
+      });
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
